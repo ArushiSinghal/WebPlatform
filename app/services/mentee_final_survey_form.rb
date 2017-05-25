@@ -24,6 +24,9 @@ class MenteeFinalSurveyForm
   def save
     survey = FinalSurvey.find_or_initialize_by(project_id: @user.project.id)
     survey.update_attributes(attributes.merge({mentee_id: @user.id, edition_id: @user.id}))
+    user = User.find(@user.id)
+    # probably would be best to replace it with num constants after inserting all badges
+    user.badges << Badge.where(["name = ?", "Final survey"]).first 
   end
 end
 

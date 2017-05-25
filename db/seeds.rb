@@ -144,3 +144,15 @@ EmailTemplate.create(
   recipients: 21,
   body: "Dear %{first_name},\r\n\r\nWe are happy to have had you in the program and we are very proud of the effort you have made to help your mentee. Congratulations on passing the program!\r\n\r\nWe will be issuing diplomas for each graduated mentee and mentors, through our partners, <a href=\"https://www.accredible.com/\" target=\"_blank\">Accredible</a>.  Expect to receive your diploma on this email in the following weeks. \r\n\r\nWe hope you had a wonderful experience with us! \r\n\r\nBest wishes,\r\n<i>The \"Learn IT, Girl!\" team</i>"
 )
+
+Badge.create(
+  name: "Midterm survey",
+  image: "https://cdn.pixabay.com/photo/2013/07/12/16/01/badge-150755_960_720.png",
+  description: "Badge awarded when mentee completed midterm survey"
+)
+
+Badge.create(
+  name: "Final survey",
+  image: "https://cdn.pixabay.com/photo/2013/07/12/16/01/badge-150755_960_720.png",
+  description: "Badge awarded when mentee completed final survey"
+)

@@ -109,11 +109,6 @@ ActiveRecord::Schema.define(version: 20161106055111) do
     t.text     "rejection_reason"
     t.integer  "evaluator_id"
     t.datetime "results_send_at"
-    t.boolean  "communicating_in_english"
-    t.boolean  "send_to_mentor_confirmed"
-    t.string   "operating_system"
-    t.string   "team_work_experience"
-    t.boolean  "previous_programming_experience"
   end
 
   create_table "mentee_midterm_evaluations", force: :cascade do |t|
@@ -195,11 +190,6 @@ ActiveRecord::Schema.define(version: 20161106055111) do
     t.integer "mentor_id"
     t.integer "mentee_id"
     t.integer "edition_id"
-    t.integer "mentor_evaluation"
-    t.integer "mentee_feedback"
-    t.integer "mentee_project_status"
-    t.integer "github_repo_status"
-    t.integer "midterm_evaluation_status", default: 0
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -232,8 +222,8 @@ ActiveRecord::Schema.define(version: 20161106055111) do
     t.boolean  "is_missing",                                default: false
     t.string   "program_country"
     t.string   "timezone"
-    t.string   "registration_token"
     t.integer  "edition_id"
+    t.string   "registration_token"
     t.datetime "missing_since"
     t.datetime "results_send_at"
     t.datetime "last_login_at"
